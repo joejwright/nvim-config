@@ -9,6 +9,11 @@ return {
 
       -- Allow Ctrl-k, j to move up and down in selection list.
       telescope.setup({
+        pickers ={
+          find_files = {
+            hidden = true
+          }
+        },
         defaults = {
           path_display = { "truncate " },
           mappings = {
