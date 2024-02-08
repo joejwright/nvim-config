@@ -13,5 +13,8 @@ vim.cmd("set nowrap")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 
+-- used for coping to clipboard
+vim.cmd("set clipboard+=unnamedplus")
+
 vim.g.mapleader = " "
 

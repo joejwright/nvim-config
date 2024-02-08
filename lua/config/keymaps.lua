@@ -14,3 +14,8 @@ vim.keymap.set("n", "cc", function()
 end, { expr = true })
 
 vim.keymap.set("x", "cc", "<Plug>(comment_toggle_linewise_visual)")
+
+-- keymaps for copy / paste
+vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
+
