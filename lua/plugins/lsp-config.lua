@@ -34,12 +34,13 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.tsserver.setup({})
-      -- lspconfig.ruby_ls.setup({
-      --   cmd = { "bash", "-c", "rvm 3.3.0@ruby-lsp do bundle exec ruby-lsp --gemfile ~/.ruby-lsp/Gemfile" },
-      --   -- cmd = { "BUNDLE_GEMFILE=~/.ruby-lsp/Gemfile", "rvm", "3.3.0@ruby-lsp", "do", "bundle", "exec", "ruby-lsp" }
-      --   -- cmd = { "~/.ruby-lsp/launch" }
-      -- })
 
+
+      -- requires rvm use 3.3.0@ruby-lsp --create --ruby-version
+      -- bundle binstubs ruby-lsp
+      lspconfig.ruby_ls.setup({
+        cmd = { "bash", "-c", "rvm 3.3.0@ruby-lsp do ~/.ruby/ruby-lsp/bin/ruby-lsp" },
+      })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
