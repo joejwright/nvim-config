@@ -12,8 +12,15 @@ This repository contains my personal Neovim configuration. Here are the plugins 
 - [mason](https://github.com/williamboman/mason.nvim): Asynchronous linting/fixing for Neovim.
 - [catpuccin](https://github.com/catppuccin/nvim): Colorscheme.
 - [tokyonight](https://github.com/folke/tokyonight.nvim): Colorscheme.
+- [vim-endwise](https://github.com/folke/tokyonight.nvim): Colorscheme.
+- [vim-rails](https://github.com/folke/tokyonight.nvim): Colorscheme.
 
 Please refer to the individual plugin's documentation for their usage and configuration details.
+
+## LSP Setup
+
+Ruby LSPs require custom gemsets in ~/.ruby
+
 
 ## Telescope Default Mappings
 
