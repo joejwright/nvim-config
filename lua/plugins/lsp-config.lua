@@ -29,6 +29,7 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
+  
 			-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -36,6 +37,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
+
 			lspconfig.tsserver.setup({})
 
 			-- requires rvm use 3.3.0@ruby-lsp --create --ruby-version
