@@ -15,7 +15,7 @@ return {
 				-- requires rvm use 3.3.0@rubocop --create --ruby-version
 				-- bundle binstubs rubocop
 				null_ls.builtins.formatting.rubocop.with({
-					command = "~/.ruby/rubocop/bin/rubocop",
+					command = "rvm 3.3.0@rubocop do ~/.ruby/rubocop/bin/rubocop",
 				}),
 			},
 		})
