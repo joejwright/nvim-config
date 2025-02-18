@@ -16,9 +16,8 @@ return {
 			mason_lspconfig.setup({
 
 				ensure_installed = {
-					"ruby_ls",
+					"ruby_lsp",
 					"lua_ls",
-					-- "tsserver",
 					-- "stimulus_ls",
 				},
 				automatic_installation = true,
@@ -37,8 +36,6 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-
-			lspconfig.tsserver.setup({})
 
       _timers = {}
       local function setup_diagnostics(client, buffer)
