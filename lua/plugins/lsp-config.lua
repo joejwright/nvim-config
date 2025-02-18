@@ -119,7 +119,7 @@ return {
 			-- requires rvm use 3.3.0@ruby-lsp --create --ruby-version
 			-- bundle binstubs ruby-lsp
 			lspconfig.ruby_lsp.setup({
-				cmd = { "bash", "-c", "rvm 3.3.0@ruby-lsp do ~/.ruby/ruby-lsp/bin/ruby-lsp" },
+				-- cmd = { "bash", "-c", "rvm 3.3.0@ruby-lsp do ~/.ruby/ruby-lsp/bin/ruby-lsp" },
 				capabilities = capabilities,
         on_attach = function(client, buffer)
           setup_diagnostics(client, buffer)
