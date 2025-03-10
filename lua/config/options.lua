@@ -13,8 +13,9 @@ vim.cmd("set nowrap")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 
--- used for coping to clipboard
-vim.cmd("set clipboard+=unnamedplus")
+-- explicitly map yank operations to system clipboard
+vim.keymap.set('n', 'y', '"+y', { noremap = true })
+vim.keymap.set('n', 'Y', '"+Y', { noremap = true })
+vim.keymap.set('v', 'y', '"+y', { noremap = true })
 
 vim.g.mapleader = " "
-
