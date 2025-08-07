@@ -21,7 +21,7 @@ return {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-            require("ruby_lsp").lsp_expand(args.body)
+            -- require("ruby_lsp").lsp_expand(args.body)
             -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
             -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
             -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
@@ -39,7 +39,7 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
         sources = cmp.config.sources({
-          { name = "ruby_ls" },
+          -- { name = "ruby_ls" },
           { name = "nvim_lsp" },
           { name = 'luasnip' }, -- For luasnip users.
           -- { name = "vsnip" }, -- For vsnip users.
